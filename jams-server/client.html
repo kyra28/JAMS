@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        
+        
+        <title>Chat Anti-Caroline</title>
+        <style>
+            #messages li:nth-child(odd) {background: #eee;}
+            body {font-size: 24px;}
+            #texteenvoi {bottom:0; width:100%;font-size: inherit;}
+            form button{font-size: inherit;}
+        </style>
+    </head>
+    <body>
+        <div >
+            <ul id="messages">
+            </ul>
+            <form id="chat">
+                <input autocomplete="off" id="texteenvoi"/>
+                <button type="submit">Envoi</button>
+            </form>
+        </div>
+        
+        <script>
+			var url = window.location.href;
+			url = url.split("/");
+			var chatId = url[url.length-1];
+			alert(chatId);
+			
+            $("#texteenvoi").focus();
+            
+            /* global io */
+            var socket = io();
+            
+			//fonction permettant l'ajoute d'un message dans la balise "ul"
+            function add_message(msg,id) {
+				if (id == chatId){
+					$('#messages').append("<li>"+msg+"</li>");
+				}
+            }
+			
+			//Cette ligne permet d'executer la fonction add_message si "chat message" est recu par le socket
+            socket.on('chat message', add_message);
+            $('#chat').submit(function(){
+				//Emet un socket au serveur contenant le message et l'id du chat
+                socket.emit('chat message', $('#texteenvoi').val(),chatId);
+                $('#texteenvoi').val("");
+                
+                // return false évite que le navigateur recharge
+                // la page à chaque envoi du formulaire
+                return false;
+                });
+        </script>
+
+    </body>
+</html>
