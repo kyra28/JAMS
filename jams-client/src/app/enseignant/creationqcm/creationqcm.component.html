@@ -1,3 +1,50 @@
-<p>
-  creationqcm works!
-</p>
+<div>
+	<h3 style="margin: 20px">
+		Créer un QCM
+	</h3>
+	<input class="form-control" type="text" placeholder="Renseignez le nom de votre QCM" style="margin-left: 40px; width: 400px">
+	<div>
+			
+		<span style="display: inline-block; width: 500px; padding: 40px; margin : 40px; position : relative; vertical-align: top; border: 1px solid #c9f370; border-radius: 16px;" >
+			<p>
+				Question i
+			</p>
+			<div class="form-group">
+    			<label for="exampleFormControlTextarea1">Ajouter une question</label>
+    			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name ="question i"></textarea>
+  			</div>
+			<p>
+				Valeur
+			</p>
+			<input class="form-control" type="text" placeholder="" name ="valeur_i">
+		</span>
+		<span style="display: inline-block; width: 700px; padding: 40px; margin : 40px; position : relative; vertical-align: top; border: 1px solid #c9f370; border-radius: 16px;">
+			<div>
+				<p>
+					Réponse i
+				</p>
+				<input class="form-control" type="text" placeholder="Ajouter une réponse" name ="reponse i">
+			 	<div class="form-check">
+			      <input class="form-check-input" type="checkbox" id="gridCheck">
+			      <label class="form-check-label" for="gridCheck">
+			        Bonne réponse ?
+			      </label>
+			    </div>
+			</div>
+
+			<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style = "margin : 10px; background-color: #8a33fa ">
+		  		Ajouter une réponse
+			</button>
+		</span>
+		<!--
+
+		<p>Plus icon on a button:
+	        <button type="button" class="btn btn-default btn-sm">
+	          <span class="glyphicon glyphicon-plus"></span> Plus
+	        </button>
+	    </p>  -->
+	</div>
+	<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style = "margin-left: 40px; background-color: #8a33fa ">
+	  		Ajouter une question
+	</button>
+</div>
