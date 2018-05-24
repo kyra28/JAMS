@@ -23,11 +23,13 @@
         <div class="checkbox">
         </div>
         <button type="submit" style = "margin-right : 10px; margin-top: 10px; background-color: #8a33fa " class="btn btn-primary">Créer un compte</button>
-		    <button type="submit" style = "margin-right : 10px; margin-top : 10px; background-color: #8a33fa " class="btn btn-primary" (click)="Etudiant()">Connexion Etudiant</button>
-        <button type="submit" style = "margin-top : 10px; background-color: #8a33fa " class="btn btn-primary" (click)="Enseignant()">Connexion Enseignant</button>
+		    <button type="submit" style = "margin-right : 10px; margin-top : 10px; background-color: #8a33fa " class="btn btn-primary" routerLink="/etudiant" >Connexion Etudiant</button>
+        <button type="submit" style = "margin-top : 10px; background-color: #8a33fa " class="btn btn-primary" routerLink="/accueil" >Connexion Enseignant</button>
       </form>
 
-    </div> <!-- /container -->
+    </div>
 
+<!--(click)="Enseignant()"
 <app-enseignant *ngIf="isEnseignant==='true'"></app-enseignant>
 <app-etudiant *ngIf="isEnseignant==='false'"></app-etudiant>
+-->

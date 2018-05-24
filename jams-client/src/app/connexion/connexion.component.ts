@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnexionComponent implements OnInit {
 
-  isEnseignant : string ="rien";
+  isEnseignant : string = "";
+  auth : boolean = false;
   constructor() { }
 
   ngOnInit() {

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Jams QCM';
+  auth : boolean = false;
+
+  Connecter() {
+    this.auth=true;
+  }
 }
