@@ -25,7 +25,7 @@ import { AccueilEnseignantComponent } from './enseignant/accueilenseignant/accue
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: '', redirectTo: '/accueil', pathMatch: 'full' },
+      //{path: '', redirectTo: '/accueil', pathMatch: 'full' },
       {path: 'accueil', component : AccueilEnseignantComponent},
       {path: 'mesqcm', component : MesQcmComponent},
       {path: 'creationqcm', component : CreationqcmComponent},

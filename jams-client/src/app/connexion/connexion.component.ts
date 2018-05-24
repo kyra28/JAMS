@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnexionComponent implements OnInit {
 
+  isEnseignant : string ="rien";
   constructor() { }
 
   ngOnInit() {
   }
-
+  Enseignant() {
+    this.isEnseignant="true";
+  }
+  Etudiant() {
+    this.isEnseignant="false";
+  }
 }
