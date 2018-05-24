@@ -1,8 +1,8 @@
-var models  = require('../server/models');
+var models  = require('../models');
 var express = require('express');
 var router  = express.Router();
 
-router.get('/create', function(req, res) {
+router.post('/create', function(req, res) {
     models.professeur.create({
         adresse: req.body.adresse,
         mdp: req.body.mdp

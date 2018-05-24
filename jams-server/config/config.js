@@ -4,8 +4,11 @@ module.exports = {
     password: "polytech",
     database: "db_qcm",
     host: "www.unclear-community.fr",
-    dialect: "mysql"
-  }
+    dialect: "mysql",
+    define: {
+        timestamps: false
+    }
+  },
   test: {
     username: "root",
     password: null,
