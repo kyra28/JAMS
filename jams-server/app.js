@@ -32,8 +32,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 //app.use('/users', users);
 //app.use('/qcm', qcm);
-//app.use('/classe', classe);
+app.use('/classe', classe);
 app.use('/professeur', professeur);
+app.use('/etudiant', professeur);
 
 
 //app.use('/session', session);

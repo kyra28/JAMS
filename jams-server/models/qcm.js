@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   return sequelize.define('qcm', {
     id_qcm: {
       type: DataTypes.INTEGER(11),
-      allowNull: false,
+      auto_increment: true,
       primaryKey: true
     },
     id_professeur: {
@@ -16,6 +16,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     nom: {
       type: DataTypes.STRING(255),
+        unique:true,
       allowNull: false
     }
   }, {

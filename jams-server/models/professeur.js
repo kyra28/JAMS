@@ -10,7 +10,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER(11),
       auto_increment: true,
       primaryKey: true,
-      
     },
     mdp: {
       type: DataTypes.STRING(255),
