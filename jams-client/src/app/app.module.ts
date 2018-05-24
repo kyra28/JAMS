@@ -10,6 +10,7 @@ import { NavbarComponent } from './enseignant/navbar/navbar.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { MesQcmComponent } from './enseignant/mesqcm/mes-qcm.component';
 import { AcceuilEnseignantComponent } from './enseignant/acceuilenseignant/acceuil-enseignant.component';
+import { MesclassesComponent } from './enseignant/mesclasses/mesclasses.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,16 @@ import { AcceuilEnseignantComponent } from './enseignant/acceuilenseignant/acceu
     EtudiantComponent,
     MesQcmComponent,
     AcceuilEnseignantComponent,
+    MesclassesComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: '', redirectTo: '/acceuil', pathMatch: 'full' },
       {path: 'acceuil', component : AcceuilEnseignantComponent},
-      {path: 'mesqcm', component : MesQcmComponent}
+      {path: 'mesqcm', component : MesQcmComponent},
+      {path: 'mesclasses', component : MesclassesComponent},
+      {path: 'messqcm', component : MesclassesComponent}
     ])
   ],
   providers: [],
