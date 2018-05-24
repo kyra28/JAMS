@@ -11,8 +11,8 @@ router.get('/', function(req, res) {
             users: users
         });
     });*/
-    res.render('index', {
-        title: 'Sequelize: Express Example'
+    res.status(200).send({
+        message: 'Welcome to the beginning of nothingness.'
     });
 });
 

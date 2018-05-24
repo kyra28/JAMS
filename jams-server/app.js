@@ -19,7 +19,7 @@ var app = express();
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine', 'pug');
-app.set('view engine', 'html');
+//app.set('view engine', 'html');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -34,10 +34,17 @@ app.use('/', routes);
 //app.use('/qcm', qcm);
 //app.use('/classe', classe);
 app.use('/professeur', professeur);
+
+
 //app.use('/session', session);
 
+app.use(function(req, res, next){
+    res.setHeader('Content-Type', 'text/plain');
+    res.status(404).send('Page introuvable !');
+});
+
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+/*app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
@@ -51,7 +58,7 @@ app.use(function(err, req, res, next) {
         message: err.message,
         error: (app.get('env') === 'development') ? err : {}
     });
-});
+});*/
 
 /*
 // Setup a default catch-all route that sends back a welcome message in JSON format.

@@ -9,7 +9,6 @@ module.exports = function(sequelize, DataTypes) {
     id_professeur: {
       type: DataTypes.INTEGER(11),
       auto_increment: true,
-      allowNull: false,
       primaryKey: true,
       
     },
