@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   return sequelize.define('session_qcm', {
     id_session: {
       type: DataTypes.INTEGER(11),
-      allowNull: false,
+      auto_increment: true,
       primaryKey: true
     },
     date: {

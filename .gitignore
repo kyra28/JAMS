@@ -9,6 +9,7 @@
 /node_modules
 
 # IDEs and editors
+.idea/workspace.xml
 /.idea
 .project
 .classpath

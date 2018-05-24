@@ -3,36 +3,30 @@ var express = require('express');
 var router  = express.Router();
 
 router.post('/create', function(req, res) {
-    models.qcm.create({
-        nom: req.body.nom,
-        id_professeur :req.body.id_professeur
+    models.etudiant.create({
+        adresse: req.body.adresse,
     }).then(function() {
         res.redirect('/');
     });
 });
 
-router.get('/:id_qcm/destroy', function(req, res) {
-    models.qcm.destroy({
+router.get('/all', function(req, res) {
+    models.etudiant.findAll({
+        adresse:req.params.adresse,
+    }).then(function() {
+        res.redirect('/');
+    });
+});
+
+router.get('/:id_etu/destroy', function(req, res) {
+    models.etudiant.destroy({
         where: {
-            id_qcm: req.params.id_qcm
+            id_etudiant: req.params.id_etudiant
         }
     }).then(function() {
         res.redirect('/');
     });
 });
-
-router.get('/:nom/find', function(req, res) {
-    models.qcm.destroy({
-        attributes : id_qcm,
-        where: {
-            nom: req.params.nom
-        }
-    }).then(function() {
-        res.redirect('/');
-    });
-});
-
-
 
 
 module.exports = router;
