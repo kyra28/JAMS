@@ -6,7 +6,7 @@
   overflow-y: hidden;
 }
 .navbar {
-  background-color: #8a33fa;
+  background-color: white;
 }
 .nav-scroller .nav {
   display: -ms-flexbox;
