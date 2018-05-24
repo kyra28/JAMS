@@ -9,7 +9,7 @@ import { CreationqcmComponent } from './enseignant/creationqcm/creationqcm.compo
 import { NavbarComponent } from './enseignant/navbar/navbar.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { MesQcmComponent } from './enseignant/mesqcm/mes-qcm.component';
-import { AcceuilEnseignantComponent } from './enseignant/acceuilenseignant/acceuil-enseignant.component';
+import { AccueilEnseignantComponent } from './enseignant/accueilenseignant/accueil-enseignant.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +20,16 @@ import { AcceuilEnseignantComponent } from './enseignant/acceuilenseignant/acceu
     NavbarComponent,
     EtudiantComponent,
     MesQcmComponent,
-    AcceuilEnseignantComponent,
+    AccueilEnseignantComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: '', redirectTo: '/acceuil', pathMatch: 'full' },
-      {path: 'acceuil', component : AcceuilEnseignantComponent},
-      {path: 'mesqcm', component : MesQcmComponent}
+      {path: '', redirectTo: '/accueil', pathMatch: 'full' },
+      {path: 'accueil', component : AccueilEnseignantComponent},
+      {path: 'mesqcm', component : MesQcmComponent},
+      {path: 'creationqcm', component : CreationqcmComponent},
+      {path: 'connexion', component : ConnexionComponent}
     ])
   ],
   providers: [],
