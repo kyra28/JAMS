@@ -13,10 +13,10 @@ router.post('/create', function(req, res) {
 
 router.get('/all', function(req, res) {
     models.professeur.findAll({
-        adresse:req.params.adresse,
-        mdp: req.params.mdp
-    }).then(function() {
-        res.redirect('/');
+        attributes : ['id_professeur']
+    }).then(function(data) {
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).send({status: "success", data: data});
     });
 });
 
