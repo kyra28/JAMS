@@ -13,19 +13,19 @@ router.post('/create', function(req, res) {
 
 router.get('/verif', function(req, res) {
     models.professeur.findAll({
-        attributes : ['id_professeur']
+        attributes : ['id_professeur'],
         where:{
-            adresse:req.params.adresse
+            adresse:req.params.adresse,
             mdp: req.params.mdp
         },
-    }).then(function(res) {
+    }).then(function(data) {
 
         if(res.length == 0){
             //callback({"status":0, "error":"NOT_FOUND","professeur":null});
             res.send({status :0});
         } else{
             res.setHeader('Content-Type','application/json');
-            res.send(data.);
+            res.send(data);
             //var professeur = {"id_professeur":res[0].get("id_professeur"), "username":res[0].get("adresse")}
             //callback({"status":1, "error":null, "professeur":professeur});
         }
