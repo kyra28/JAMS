@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mesclasses',
-  templateUrl: './mesclasses.component.html',
-  styleUrls: ['./mesclasses.component.css']
+  templateUrl: './mes-classes.component.html',
+  styleUrls: ['./mes-classes.component.css']
 })
-export class MesclassesComponent implements OnInit {
+export class MesClassesComponent implements OnInit {
 
   constructor() { }
 

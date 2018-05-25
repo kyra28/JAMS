@@ -9,9 +9,9 @@ import { NavbarComponent } from './enseignant/navbar/navbar.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { MesQcmComponent } from './enseignant/mesqcm/mes-qcm.component';
 import { AccueilEnseignantComponent } from './enseignant/accueilenseignant/accueil-enseignant.component';
+import { EnseignantsessionComponent } from './enseignant/enseignantsession/enseignantsession.component';
+import {EnseignantbilanComponent} from "./enseignant/enseignantbilan/enseignantbilan.component";
 import {routing} from "./app-routing.module";
-import {EnseignantsessionComponent} from "./enseignant/enseignantsession/enseignantsession.component";
-import {MesClassesComponent} from "./enseignant/mesclasses/mes-classes.component";
 
 @NgModule({
   declarations: [
@@ -24,12 +24,11 @@ import {MesClassesComponent} from "./enseignant/mesclasses/mes-classes.component
     MesQcmComponent,
     AccueilEnseignantComponent,
     EnseignantsessionComponent,
-    MesClassesComponent
+    EnseignantbilanComponent,
   ],
   imports: [
     BrowserModule,
     routing
-
   ],
   providers: [],
   bootstrap: [AppComponent]
