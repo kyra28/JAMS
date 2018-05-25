@@ -13,6 +13,9 @@ var qcm  = require('./routes/qcm');
 var classe  = require('./routes/classe');
 var professeur  = require('./routes/professeur');
 var session  = require('./routes/session');
+var etudiant  = require('./routes/etudiant');
+var question  = require('./routes/question');
+var reponse  = require('./routes/reponse');
 
 var app = express();
 
@@ -31,13 +34,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 //app.use('/users', users);
-//app.use('/qcm', qcm);
+app.use('/qcm', qcm);
+app.use('/question', question);
 app.use('/classe', classe);
 app.use('/professeur', professeur);
-app.use('/etudiant', professeur);
-
-
-//app.use('/session', session);
+app.use('/etudiant', etudiant);
+app.use('/reponse', reponse);
+app.use('/session', session);
 
 app.use(function(req, res, next){
     res.setHeader('Content-Type', 'text/plain');
@@ -70,7 +73,7 @@ app.get('*', (req, res) => res.status(200).send({
 module.exports = app;
 
 
-const port = parseInt(process.env.PORT, 10) || 8000;
+const port = parseInt(process.env.PORT, 10) || 5353;
 app.set('port', port);
 
 const server = http.createServer(app);

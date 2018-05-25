@@ -2,41 +2,67 @@ var models  = require('../models');
 var express = require('express');
 var router  = express.Router();
 
-router.post('/create', function(req, res) {
+//Tests avec get
+/*router.get('/:adresse/:mdp/create', function(req, res) {
     models.professeur.create({
-        adresse: req.body.adresse,
-        mdp: req.body.mdp
-    }).then(function(d) {
+        adresse: req.params.adresse,
+        mdp: req.params.mdp
+    }).then(function() {
         res.send({status :1});
     });
 });
 
-router.get('/verif', function(req, res) {
+router.get('/:adresse/:mdp/verif', function(req, res) {
     models.professeur.findAll({
-        attributes : ['id_professeur']
+        attributes : ['id_professeur'],
         where:{
-            adresse:req.params.adresse
+            adresse:req.params.adresse,
             mdp: req.params.mdp
         },
-    }).then(function(res) {
+    }).then(function(data) {
 
-        if(res.length == 0){
+        if(data.length == 0){
             //callback({"status":0, "error":"NOT_FOUND","professeur":null});
             res.send({status :0});
         } else{
             res.setHeader('Content-Type','application/json');
-            res.send(data.);
-            //var professeur = {"id_professeur":res[0].get("id_professeur"), "username":res[0].get("adresse")}
-            //callback({"status":1, "error":null, "professeur":professeur});
+            res.send(data);
         }
+    });
+});
 
+*/
+router.post('/create', function(req, res) {
+    models.professeur.create({
+        adresse: req.body.adresse,
+        mdp: req.body.mdp
+    }).then(function() {
+        res.send({status :1});
+    });
+});
+
+router.post('/verif', function(req, res) {
+    models.professeur.findAll({
+        attributes : ['id_professeur'],
+        where:{
+            adresse:req.body.adresse,
+            mdp: req.body.mdp
+        },
+    }).then(function(data) {
+
+        if(data.length == 0){
+            //callback({"status":0, "error":"NOT_FOUND","professeur":null});
+            res.send({status :0});
+        } else{
+            res.setHeader('Content-Type','application/json');
+            res.send(data);
+        }
     });
 });
 
 router.get('/all', function(req, res) {
     models.professeur.findAll({
-        adresse:req.params.adresse,
-        mdp: req.params.mdp
+        attributes: ["id_professeur","adresse"]
     }).then(function(data) {
         res.setHeader('Content-Type','application/json');
         res.send(data);
@@ -53,14 +79,15 @@ router.get('/:id_professeur/destroy', function(req, res) {
     });
 });
 
-router.get('/:adresse', function(req, res) {
+router.get('/:adresse/search', function(req, res) {
     models.professeur.findAll({
+        attributes : ['id_professeur'],
         where: {
-            adresse: req.body.adresse
+            adresse: req.params.adresse
         }
     }).then(function(data) {
         res.setHeader('Content-Type','application/json');
-        res.send(data.valueOf(adresse));
+        res.send(data);
     });
 });
 
