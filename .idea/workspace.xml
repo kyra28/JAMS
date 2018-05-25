@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dea739f-2b75-4de9-8554-e9612e3ddf5f" name="Default" comment="Post request">
+    <list default="true" id="2dea739f-2b75-4de9-8554-e9612e3ddf5f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jams-client/src/app/play-qcm-professor-view/play-qcm-professor-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jams-client/src/app/play-qcm-professor-view/play-qcm-professor-view.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jams-client/src/app/services/app-data-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jams-client/src/app/services/app-data-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jams-server/models/session_qcm.js" beforeDir="false" afterPath="$PROJECT_DIR$/jams-server/models/session_qcm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jams-server/routes/classe.js" beforeDir="false" afterPath="$PROJECT_DIR$/jams-server/routes/classe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jams-server/routes/qcm.js" beforeDir="false" afterPath="$PROJECT_DIR$/jams-server/routes/qcm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jams-server/routes/session.js" beforeDir="false" afterPath="$PROJECT_DIR$/jams-server/routes/session.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,12 +21,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="play-qcm-professor-view.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="play-qcm-professor-view.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jams-client/src/app/play-qcm-professor-view/play-qcm-professor-view.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="21" column="54" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="54" />
+            <state relative-caret-position="168">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accueil-enseignant.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="play-qcm-professor-view.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jams-client/src/app/play-qcm-professor-view/play-qcm-professor-view.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="21" selection-end-line="24" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qcm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jams-server/routes/qcm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="70" column="61" lean-forward="true" selection-start-line="70" selection-start-column="61" selection-end-line="74" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app-data-service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jams-client/src/app/services/app-data-service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accueil-enseignant.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="19" column="97" selection-start-line="19" selection-start-column="97" selection-end-line="19" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classe.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jams-server/routes/classe.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="100" column="67" selection-start-line="100" selection-start-column="67" selection-end-line="100" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qcm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jams-server/models/qcm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102" />
           </provider>
         </entry>
       </file>
@@ -36,6 +102,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>prof</find>
+      <find>all</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -52,20 +119,21 @@
         <option value="$PROJECT_DIR$/server/.sequelizerc" />
         <option value="$PROJECT_DIR$/jams-server/BD/bd.js" />
         <option value="$PROJECT_DIR$/jams-server/server/config/config.json" />
-        <option value="$PROJECT_DIR$/jams-server/routes/classe.js" />
         <option value="$PROJECT_DIR$/jams-server/routes/users.js" />
         <option value="$PROJECT_DIR$/jams-server/server/models/index.js" />
         <option value="$PROJECT_DIR$/jams-server/routes/index.js" />
         <option value="$PROJECT_DIR$/jams-server/app.js" />
         <option value="$PROJECT_DIR$/jams-server/serveur.js" />
         <option value="$PROJECT_DIR$/jams-server/routes/etudiant.js" />
-        <option value="$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.html" />
         <option value="$PROJECT_DIR$/jams-server/routes/professeur.js" />
-        <option value="$PROJECT_DIR$/jams-server/routes/qcm.js" />
         <option value="$PROJECT_DIR$/jams-client/src/app/services/app-data-service.ts" />
         <option value="$PROJECT_DIR$/jams-server/routes/session.js" />
         <option value="$PROJECT_DIR$/jams-server/models/session_qcm.js" />
+        <option value="$PROJECT_DIR$/jams-server/routes/qcm.js" />
         <option value="$PROJECT_DIR$/jams-client/src/app/play-qcm-professor-view/play-qcm-professor-view.component.ts" />
+        <option value="$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.ts" />
+        <option value="$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.html" />
+        <option value="$PROJECT_DIR$/jams-server/routes/classe.js" />
       </list>
     </option>
   </component>
@@ -264,11 +332,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527240381405</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Requests">
+      <created>1527241306322</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527241306322</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21990000" />
+    <option name="totallyTimeSpent" value="23600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -276,14 +351,14 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="8" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32857144" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021962" side_tool="true" visible="true" weight="0.33492064" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49853587" weight="0.30634922" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50292826" side_tool="true" visible="true" weight="0.33492064" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4978038" weight="0.30634922" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.32857144" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4978038" visible="true" weight="0.33492064" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49707174" visible="true" weight="0.33492064" />
       <window_info anchor="bottom" id="TypeScript" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26573938" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32857144" />
+      <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49926794" weight="0.32857144" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
@@ -317,17 +392,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of https://github.com/kyra28/JAMS&#10;&#10;# Conflicts:&#10;#&#9;jams-server/package-lock.json" />
     <MESSAGE value="Post request" />
-    <option name="LAST_COMMIT_MESSAGE" value="Post request" />
+    <MESSAGE value="Requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Requests" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jams-server/server/models/index.js" />
-    <entry file="file://$PROJECT_DIR$/jams-server/BD/bd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -408,9 +476,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/jams-server/server/config/config.json" />
-    <entry file="file://$PROJECT_DIR$/jams-server/routes/classe.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/jams-server/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -494,20 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jams-client/src/app/play-qcm-professor-view/play-qcm-professor-view.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jams-server/routes/etudiant.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -522,27 +573,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jams-server/routes/qcm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jams-client/src/app/app.constants.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jams-client/src/app/services/app-data-service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="64" lean-forward="true" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -560,10 +594,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jams-client/src/app/play-qcm-professor-view/play-qcm-professor-view.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jams-client/src/app/services/app-data-service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jams-server/models/qcm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jams-client/src/app/play-qcm-professor-view/play-qcm-professor-view.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="54" />
+        <state relative-caret-position="168">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jams-client/src/app/enseignant/accueilenseignant/accueil-enseignant.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="97" selection-start-line="19" selection-start-column="97" selection-end-line="19" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jams-server/routes/qcm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="70" column="61" lean-forward="true" selection-start-line="70" selection-start-column="61" selection-end-line="74" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jams-server/routes/classe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="100" column="67" selection-start-line="100" selection-start-column="67" selection-end-line="100" selection-end-column="67" />
         </state>
       </provider>
     </entry>

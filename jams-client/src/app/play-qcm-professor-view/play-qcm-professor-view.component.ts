@@ -19,7 +19,7 @@ export class PlayQcmProfessorViewComponent implements OnInit {
 
   ngOnInit() {
     this._dataService
-            .getAll<"professeur/email/mdp/verif",any[]>()
+            .getAll<any[]>("professeur/email/mdp/verif")
             .subscribe((data: any[]) => this.values = data,
             error => () => {
                 console.log('error');
@@ -27,8 +27,9 @@ export class PlayQcmProfessorViewComponent implements OnInit {
             () => {
               console.log('success');
               });
-    this.iterator = 0;
-  }
+
+
+}
 
   iteratorPlusUn() {
     this.iterator = this.iterator + 1;

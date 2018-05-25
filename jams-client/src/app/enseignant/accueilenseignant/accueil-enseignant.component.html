@@ -5,30 +5,22 @@
     <div style="margin: 10px;">
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Sélectionner un QCM</label>
+          <label class="input-group-text" for="selectqcm">Sélectionner un QCM</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect01">
-          <option value="1">QCM 1</option>
-          <option value="2">QCM 2</option>
-          <option value="3">QCM 3</option>
+        <select  class="custom-select" id="selectqcm">
+          <option *ngFor="let qcm of qcmlist" [value]="qcm.id_qcm">{{qcm.nom}}</option>
         </select>
-      </div>
-
-      <div *ngFor="let qcm of qcmlist">
-        {{qcm.nom}}
-
       </div>
 
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Sélectionner une classe</label>
+          <label class="input-group-text" for="selectclasse">Sélectionner une classe</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect02">
-          <option value="1">Classe 1</option>
-          <option value="2">Classe 2</option>
-          <option value="3">Classe 3</option>
+        <select  class="custom-select" id="selectclasse">
+          <option *ngFor="let classe of classelist" [value]="classe.id_classe">{{classe.nom}}</option>
         </select>
       </div>
+
     </div>
     <button type="submit" class="btn btn-primary" routerLink="/session">Commencer</button>
   </div>

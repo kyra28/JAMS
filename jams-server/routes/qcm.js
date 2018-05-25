@@ -60,6 +60,24 @@ router.get('/:id_professeur/all', function(req, res) {
     });
 });
 
+
+
+router.get('/all2', function(req, res) {
+    models.qcm.findAll({
+    }).then(function(data) {
+        if(data.length == 0){
+            res.send({status :0});
+        } else{
+            res.setHeader('Content-Type','application/json');
+            res.setHeader('Access-Control-Allow-Origin','http://localhost:4200');
+            res.setHeader('Access-Control-Allow-Methods','GET,POST,OPTIONS,PUT,PATCH,DELETE');
+            res.setHeader('Access-Control-Allow-Headers','X-Requested-With,content-type');
+            res.setHeader('Access-Control-Allow-Credentials',true);
+            res.send(data);
+        }
+    });
+});
+
 //renvoie toutes les questions d'un qcm
 router.post('/questions', function(req, res) {
     models.question.findAll({
