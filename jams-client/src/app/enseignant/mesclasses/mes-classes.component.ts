@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../../services/app-data-service";
 
 @Component({
   selector: 'app-mesclasses',
@@ -7,11 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MesClassesComponent implements OnInit {
 
-  constructor() { }
+  public classelist: any[];
+  public id_professeur: number;
 
-  ngOnInit() {
+  constructor(
+    private _dataService: DataService) {
   }
 
+  ngOnInit() {
+    this._dataService
+      .getAll<any[]>("classe/all")
+      .subscribe((data: any[]) => this.classelist = data,
+        error => () => {
+          console.log('error');
+        },
+        () => {
+          console.log('success');
+        });
+  }
 
 
 }

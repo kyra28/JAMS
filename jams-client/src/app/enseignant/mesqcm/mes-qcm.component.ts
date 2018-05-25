@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../../services/app-data-service";
 
 @Component({
   selector: 'app-mesqcm',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MesQcmComponent implements OnInit {
 
-  constructor() { }
+  public qcmlist: any[];
+  public id_professeur: number;
 
-  ngOnInit() {
+  constructor(
+    private _dataService: DataService) {
   }
 
+  ngOnInit() {
+    this._dataService
+      .getAll<any[]>("qcm/all2")
+      .subscribe((data: any[]) => this.qcmlist = data,
+        error => () => {
+          console.log('error');
+        },
+        () => {
+          console.log('success');
+        });
+
+
+  }
 }
