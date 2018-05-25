@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        
+        
+        <title>Chat Anti-Caroline</title>
+        <style>
+            #messages li:nth-child(odd) {background: #eee;}
+            body {font-size: 24px;}
+            #texteenvoi {bottom:0; width:100%;font-size: inherit;}
+            form button{font-size: inherit;}
+        </style>
+    </head>
+    <body>
+        <div >
+            <ul id="messages">
+            </ul>
+            <p id="question">En attente du lancement de la session!</p>
+            <div id="reponses"/>
+        </div>
+        
+        <script>
+			var url = window.location.href;
+			url = url.split("/");
+			var chatId = url[url.length-1];
+			var bonneReponse;
+			var repondu;
+			
+            function chargeQuestion(data)
+			{
+                console.log("charge"+data.question);
+				document.getElementById("question").innerHTML = data.question;
+				var index = 0;
+                var divReponses = document.getElementById("reponses");
+                divReponses.innerHTML = "";
+				data.reponses.forEach(function(reponse){
+                    var label = document.createElement("label");
+                    var radio = document.createElement("input");
+                    radio.type = "radio";
+                    radio.name = "group";
+                    radio.value = index++;
+                    radio.onclick= answering ;
+                    label.appendChild(radio);
+                    label.appendChild(document.createTextNode(reponse));
+                    divReponses.appendChild(label);
+				});
+				bonneReponse=data.bonneReponse;
+				repondu=false;
+			}
+
+			function checkPoints()
+            {
+                if ($("input[name=group]:checked").val() == bonneReponse)
+                    socket.point++;
+            }
+
+            function answering()
+            {
+                console.log("onclick!");
+                if (!repondu){
+                    repondu=true;
+                    socket.emit('repondu');
+                }
+            }
+			
+            /* global io */
+            var socket = io();
+            socket.point=0;
+			socket.emit('add user', 'eleve');
+
+			socket.on('next',function(data){
+			    console.log("eleve_next");
+	            checkPoints(data.bonneReponse);
+                chargeQuestion(data);
+			});
+			
+			socket.on('start',function(data){
+				chargeQuestion(data);
+			});
+			socket.on('finish',function(){
+                checkPoints();
+                console.log(socket.point);
+				document.getElementById("question").innerHTML = "Vous avez "+socket.point+" points!";
+			});
+
+        </script>
+
+    </body>
+</html>
