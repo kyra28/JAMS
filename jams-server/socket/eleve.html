@@ -5,26 +5,19 @@
         <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
         
         
-        <title>Chat Anti-Caroline</title>
+        <title>QCM - Etudiant</title>
         <style>
-            #messages li:nth-child(odd) {background: #eee;}
             body {font-size: 24px;}
-            #texteenvoi {bottom:0; width:100%;font-size: inherit;}
             form button{font-size: inherit;}
         </style>
     </head>
     <body>
         <div >
-            <ul id="messages">
-            </ul>
             <p id="question">En attente du lancement de la session!</p>
             <div id="reponses"/>
         </div>
         
         <script>
-			var url = window.location.href;
-			url = url.split("/");
-			var chatId = url[url.length-1];
 			var bonneReponse;
 			var repondu;
 			
