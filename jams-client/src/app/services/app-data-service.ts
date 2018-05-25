@@ -25,7 +25,7 @@ export class DataService {
         return this.http.get<T>(this.actionUrl + '/' + id);
     }
 
-    public add<T>(itemName: string): Observable<T> {
+    public add<T>(itemName: any): Observable<T> {
         // const toAdd = JSON.stringify({ ItemName: itemName });
         return this.http.post<T>(this.actionUrl, itemName);
     }
@@ -60,6 +60,9 @@ export class DataService {
   }
   public serviceEtudiant () {
     this.actionUrl = 'http://localhost:5353/etudiant/all';
+  }
+  public serviceNew () {
+    this.actionUrl = 'http://localhost:5353/etudiant/create';
   }
 }
 
