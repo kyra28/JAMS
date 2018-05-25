@@ -21,9 +21,19 @@ import {routing} from "./app-routing.module";
     EtudiantComponent,
     MesQcmComponent,
     AccueilEnseignantComponent,
+    EnseignantsessionComponent,
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot([
+      {path: '', redirectTo: '/connexion', pathMatch: 'full' },
+      {path: 'accueil', component : EnseignantComponent},
+      {path: 'mesqcm', component : MesQcmComponent},
+      {path: 'creationqcm', component : CreationqcmComponent},
+      {path: 'connexion', component : ConnexionComponent},
+      {path: 'etudiant', component : EtudiantComponent},
+      {path: 'session', component : EnseignantsessionComponent}
+    ])
     routing
 
   ],

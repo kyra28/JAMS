@@ -3,7 +3,6 @@ module.exports = function(sequelize, DataTypes) {
     id_reponse: {
       type: DataTypes.INTEGER(11),
       auto_increment: true,
-      allowNull: false,
       primaryKey: true
     },
     id_question: {

@@ -3,7 +3,6 @@ module.exports = function(sequelize, DataTypes) {
     id_question: {
       type: DataTypes.INTEGER(11),
       auto_increment: true,
-      allowNull: false,
       primaryKey: true
     },
     id_qcm: {
@@ -18,8 +17,7 @@ module.exports = function(sequelize, DataTypes) {
     question: {
       type: DataTypes.TEXT,
       allowNull: false,
-      unique: true,
-      
+      unique: true
     },
     valeur: {
       type: DataTypes.INTEGER(11),
