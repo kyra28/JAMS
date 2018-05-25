@@ -21,18 +21,12 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>1</td>
-        <td><a href="#"> QCM1 - Titre de QCM n°1 </a></td>
+      <tr *ngFor="let qcm of qcmlist">
+        <td>{{qcm.id_qcm}}</td>
+        <td>{{qcm.nom}}</td>
       </tr>
-      <tr>
-        <td>2</td>
-        <td><a href="#"> QCM2 - Titre de QCM n°2 </a></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td><a href="#"> QCM3 - Titre de QCM n°3 </a></td>
-      </tr>
+
+
       </tbody>
     </table>
   </div>
