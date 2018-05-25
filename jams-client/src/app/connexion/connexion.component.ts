@@ -9,7 +9,6 @@ export class ConnexionComponent implements OnInit {
 
   isEnseignant : string = "";
   auth : boolean = false;
-  constructor() { }
 
   ngOnInit() {
   }
@@ -19,4 +18,5 @@ export class ConnexionComponent implements OnInit {
   Etudiant() {
     this.isEnseignant="false";
   }
+
 }

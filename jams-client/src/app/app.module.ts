@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule} from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { ConnexionComponent } from './connexion/connexion.component';
@@ -11,8 +10,14 @@ import { EtudiantComponent } from './etudiant/etudiant.component';
 import { MesQcmComponent } from './enseignant/mesqcm/mes-qcm.component';
 import { AccueilEnseignantComponent } from './enseignant/accueilenseignant/accueil-enseignant.component';
 import { EnseignantsessionComponent } from './enseignant/enseignantsession/enseignantsession.component';
-import { EnseignantbilanComponent } from './enseignant/enseignantbilan/enseignantbilan.component';
-import { EtudiantbilanComponent } from './etudiant/etudiantbilan/etudiantbilan.component';
+import {EnseignantbilanComponent} from "./enseignant/enseignantbilan/enseignantbilan.component";
+import {routing} from "./app-routing.module";
+import {MesClassesComponent} from "./enseignant/mesclasses/mes-classes.component";
+import {PlayQcmProfessorViewComponent} from "./play-qcm-professor-view/play-qcm-professor-view.component";
+import {DataService} from "./services/app-data-service";
+import {Configuration} from "./app.constants";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -26,23 +31,15 @@ import { EtudiantbilanComponent } from './etudiant/etudiantbilan/etudiantbilan.c
     AccueilEnseignantComponent,
     EnseignantsessionComponent,
     EnseignantbilanComponent,
-    EtudiantbilanComponent,
+    MesClassesComponent,
+    PlayQcmProfessorViewComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {path: '', redirectTo: '/connexion', pathMatch: 'full' },
-      {path: 'accueil', component : EnseignantComponent},
-      {path: 'mesqcm', component : MesQcmComponent},
-      {path: 'creationqcm', component : CreationqcmComponent},
-      {path: 'connexion', component : ConnexionComponent},
-      {path: 'etudiant', component : EtudiantComponent},
-      {path: 'session', component : EnseignantsessionComponent},
-      {path: 'enseignantbilan', component : EnseignantbilanComponent},
-      {path: 'etudiantbilan', component : EtudiantbilanComponent}
-    ])
+    routing,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService,Configuration],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
