@@ -1,0 +1,67 @@
+.btn-envoie-question {
+  color: #fff;
+  background-color: #8a33fa;
+  border-color: #8a33fa;
+}
+
+.btn-envoie-question:hover {
+  color: #fff;
+  background-color: #6f42c1 ;
+  border-color: #6f42c1;
+}
+
+.btn-envoie-question:focus, .btn-success.focus {
+  box-shadow: 0 0 0 0.2rem #C098CE;
+}
+
+.btn-envoie-question.disabled, .btn-success:disabled {
+  color: #fff;
+  background-color: #8a33fa;
+  border-color: #8a33fa;
+}
+
+.btn-envoie-question:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
+.show > .btn-success.dropdown-toggle {
+  color: #fff;
+  background-color: #8a33fa;
+  border-color: #8a33fa;
+}
+
+.btn-envoie-question:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-success.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #C098CE;
+}
+
+.btn-envoie-reponse {
+  color: #fff;
+  background-color: #77E85B;
+  border-color: #77E85B;
+}
+
+.btn-envoie-reponse:hover {
+  color: #fff;
+  background-color: #57C13C ;
+  border-color: #57C13C;
+}
+
+.btn-envoie-reponse:focus, .btn-success.focus {
+  box-shadow: 0 0 0 0.2rem #9AFEA4;
+}
+
+.btn-envoie-reponse.disabled, .btn-success:disabled {
+  color: #fff;
+  background-color: #77E85B;
+  border-color: #77E85B;
+}
+
+.btn-envoie-reponse:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
+.show > .btn-success.dropdown-toggle {
+  color: #fff;
+  background-color: #77E85B;
+  border-color: #77E85B;
+}
+
+.btn-envoie-reponse:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-success.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #9AFEA4;
+}

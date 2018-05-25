@@ -10,6 +10,7 @@ import { NavbarComponent } from './enseignant/navbar/navbar.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { MesQcmComponent } from './enseignant/mesqcm/mes-qcm.component';
 import { AccueilEnseignantComponent } from './enseignant/accueilenseignant/accueil-enseignant.component';
+import { EnseignantsessionComponent } from './enseignant/enseignantsession/enseignantsession.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AccueilEnseignantComponent } from './enseignant/accueilenseignant/accue
     EtudiantComponent,
     MesQcmComponent,
     AccueilEnseignantComponent,
+    EnseignantsessionComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { AccueilEnseignantComponent } from './enseignant/accueilenseignant/accue
       {path: 'mesqcm', component : MesQcmComponent},
       {path: 'creationqcm', component : CreationqcmComponent},
       {path: 'connexion', component : ConnexionComponent},
-      {path: 'etudiant', component : EtudiantComponent}
+      {path: 'etudiant', component : EtudiantComponent},
+      {path: 'session', component : EnseignantsessionComponent}
     ])
   ],
   providers: [],
