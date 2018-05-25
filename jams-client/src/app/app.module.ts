@@ -19,6 +19,7 @@ import {Configuration} from "./app.constants";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {HttpModule} from "@angular/http";
 import {EtudiantbilanComponent} from "./etudiant/etudiantbilan/etudiantbilan.component";
+import { ClasseComponent } from './enseignant/classe/classe.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {EtudiantbilanComponent} from "./etudiant/etudiantbilan/etudiantbilan.com
     EnseignantbilanComponent,
     MesClassesComponent,
     PlayQcmProfessorViewComponent,
-    EtudiantbilanComponent
+    EtudiantbilanComponent,
+    ClasseComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import {MesClassesComponent} from "./enseignant/mesclasses/mes-classes.component
 import {EnseignantbilanComponent} from "./enseignant/enseignantbilan/enseignantbilan.component";
 import {PlayQcmProfessorViewComponent} from "./play-qcm-professor-view/play-qcm-professor-view.component";
 import {EtudiantbilanComponent} from "./etudiant/etudiantbilan/etudiantbilan.component";
+import { ClasseComponent } from './enseignant/classe/classe.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/connexion', pathMatch: 'full' },
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
   {path: 'session', component : EnseignantsessionComponent},
   {path: 'enseignantbilan', component : EnseignantbilanComponent},
   {path: 'testrest', component : PlayQcmProfessorViewComponent},
-  {path: 'etudiantbilan', component : EtudiantbilanComponent}
+  {path: 'etudiantbilan', component : EtudiantbilanComponent},
+  {path: 'classe', component : ClasseComponent}
 
 ];
 
