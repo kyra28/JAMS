@@ -10,6 +10,8 @@ import { EtudiantComponent } from './etudiant/etudiant.component';
 import { MesQcmComponent } from './enseignant/mesqcm/mes-qcm.component';
 import { AccueilEnseignantComponent } from './enseignant/accueilenseignant/accueil-enseignant.component';
 import {routing} from "./app-routing.module";
+import {EnseignantsessionComponent} from "./enseignant/enseignantsession/enseignantsession.component";
+import {MesClassesComponent} from "./enseignant/mesclasses/mes-classes.component";
 
 @NgModule({
   declarations: [
@@ -22,18 +24,10 @@ import {routing} from "./app-routing.module";
     MesQcmComponent,
     AccueilEnseignantComponent,
     EnseignantsessionComponent,
+    MesClassesComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {path: '', redirectTo: '/connexion', pathMatch: 'full' },
-      {path: 'accueil', component : EnseignantComponent},
-      {path: 'mesqcm', component : MesQcmComponent},
-      {path: 'creationqcm', component : CreationqcmComponent},
-      {path: 'connexion', component : ConnexionComponent},
-      {path: 'etudiant', component : EtudiantComponent},
-      {path: 'session', component : EnseignantsessionComponent}
-    ])
     routing
 
   ],
