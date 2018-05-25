@@ -12,6 +12,7 @@ import { MesQcmComponent } from './enseignant/mesqcm/mes-qcm.component';
 import { AccueilEnseignantComponent } from './enseignant/accueilenseignant/accueil-enseignant.component';
 import { EnseignantsessionComponent } from './enseignant/enseignantsession/enseignantsession.component';
 import { EnseignantbilanComponent } from './enseignant/enseignantbilan/enseignantbilan.component';
+import { EtudiantbilanComponent } from './etudiant/etudiantbilan/etudiantbilan.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { EnseignantbilanComponent } from './enseignant/enseignantbilan/enseignan
     AccueilEnseignantComponent,
     EnseignantsessionComponent,
     EnseignantbilanComponent,
+    EtudiantbilanComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { EnseignantbilanComponent } from './enseignant/enseignantbilan/enseignan
       {path: 'connexion', component : ConnexionComponent},
       {path: 'etudiant', component : EtudiantComponent},
       {path: 'session', component : EnseignantsessionComponent},
-      {path: 'enseignantbilan', component : EnseignantbilanComponent}
+      {path: 'enseignantbilan', component : EnseignantbilanComponent},
+      {path: 'etudiantbilan', component : EtudiantbilanComponent}
     ])
   ],
   providers: [],
