@@ -20,12 +20,16 @@ router.get('/:adresse/:mdp/verif', function(req, res) {
             mdp: req.params.mdp
         },
     }).then(function(data) {
-
+        res.setHeader('Content-Type','application/json');
+        res.setHeader('Access-Control-Allow-Origin','http://localhost:4200');
+        res.setHeader('Access-Control-Allow-Methods','GET,POST,OPTIONS,PUT,PATCH,DELETE');
+        res.setHeader('Access-Control-Allow-Headers','X-Requested-With,content-type');
+        res.setHeader('Access-Control-Allow-Credentials',true);
+        res.setHeader('Content-Type','application/json');
         if(data.length == 0){
             //callback({"status":0, "error":"NOT_FOUND","professeur":null});
             res.send({status :0});
         } else{
-            res.setHeader('Content-Type','application/json');
             res.send(data);
         }
     });

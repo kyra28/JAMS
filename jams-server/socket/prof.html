@@ -17,16 +17,8 @@
         <div >
 			<div id="eleves">Eleves : 0</div>
 			<div id="reponses">Réponses : 0</div>
-            <ul id="messages">
-            </ul>
-			<select>
-			  <option value="volvo">Volvo</option>
-			  <option value="saab">Saab</option>
-			  <option value="mercedes">Mercedes</option>
-			  <option value="audi">Audi</option>
-			</select>
             <form id="chat">
-                <button type="submit">Envoi</button>
+                <button id="submitBtn" type="submit">Start</button>
             </form>
         </div>
         
@@ -74,11 +66,12 @@
 				    console.log("start");
 					socket.emit('start', {
 					    numero : indexQuestion+1,
-						question : "premiere question",
+						question : "Premiere question",
 						reponses : ["r1","r2","r3"],
 						bonneReponse : 1
 					});
 					indexQuestion++;
+					document.getElementById("submitBtn").innerHTML="Next";
 				}
 				else if(indexQuestion==2){
                     socket.emit('finish');
@@ -87,11 +80,13 @@
 				{
 					socket.emit('next', {
 					    numero : indexQuestion+1,
-						question : "suivant question",
+						question : "Question suivante",
 						reponses : ["re1","re2","re3"],
 						bonneReponse : 2
 					});
 					indexQuestion++;
+                    if(indexQuestion==2)
+                        document.getElementById("submitBtn").innerHTML="Finish";
 				}
                 //socket.emit('chat message', $('#texteenvoi').val(),chatId);
                 //$('#texteenvoi').val("");

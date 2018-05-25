@@ -61,10 +61,10 @@ router.get('/:id_professeur/all', function(req, res) {
 });
 
 //renvoie toutes les questions d'un qcm
-router.post('/questions', function(req, res) {
+router.get('/:id_qcm/questions', function(req, res) {
     models.question.findAll({
         where:{
-            id_qcm:req.body.id_qcm
+            id_qcm:req.params.id_qcm
         },
     }).then(function(data) {
 
