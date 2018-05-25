@@ -41,13 +41,20 @@ router.get('/:nom/find', function(req, res) {
 });
 
 //renvoie tous les qcm
-router.get('/all', function(req, res) {
+router.get('/:id_professeur/all', function(req, res) {
     models.qcm.findAll({
     }).then(function(data) {
+        where: {
+            id_professeur: req.params.id_professeur
+        }
         if(data.length == 0){
             res.send({status :0});
         } else{
             res.setHeader('Content-Type','application/json');
+            res.setHeader('Access-Control-Allow-Origin','http://localhost:4200');
+            res.setHeader('Access-Control-Allow-Methods','GET,POST,OPTIONS,PUT,PATCH,DELETE');
+            res.setHeader('Access-Control-Allow-Headers','X-Requested-With,content-type');
+            res.setHeader('Access-Control-Allow-Credentials',true);
             res.send(data);
         }
     });

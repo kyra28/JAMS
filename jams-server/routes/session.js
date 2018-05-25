@@ -10,7 +10,7 @@ router.post('/create', function(req, res) {
         cle: req.body.cle,
         id_qcm: req.body.id_qcm,
         id_classe: req.body.id_classe,
-        //id_professeur :req.body.id_professeur,
+        id_professeur :req.body.id_professeur,
 
     }).then(function() {
         res.send({status :1});
@@ -60,7 +60,7 @@ router.get('/all', function(req, res) {
 
 
 //creer et ajouter un bilan a une session
-router.post('/bilan', function(req, res) {
+router.post('/:id_professeur/bilan', function(req, res) {
     models.bilan_session.create({
         id_session: req.body.id_session,
         note: req.body.note,

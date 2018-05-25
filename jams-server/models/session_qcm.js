@@ -31,16 +31,16 @@ module.exports = function(sequelize, DataTypes) {
         model: 'classe',
         key: 'id_classe'
       }
-    },/*
+    },
       id_professeur: {
           type: DataTypes.INTEGER(11),
           allowNull: false,
           primaryKey: false,
           references: {
               model: 'professeur',
-              key: 'id_prfesseur'
+              key: 'id_professeur'
           }
-      },*/
+      },
     nom: {
       type: DataTypes.STRING(255),
       allowNull: false,

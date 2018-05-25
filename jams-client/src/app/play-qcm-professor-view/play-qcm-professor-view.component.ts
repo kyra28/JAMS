@@ -18,24 +18,15 @@ export class PlayQcmProfessorViewComponent implements OnInit {
    }
 
   ngOnInit() {
-    this._dataService.serviceNew();
-    this._dataService.add({adresse: "antoinsfdsfdsfdsfd"})
-      .subscribe((data: any[])=>this.values=data,
-        error => () => {
-          console.log('error');
-        },
-        () => {
-          console.log('success');
-        });
-    /*this._dataService
-            .getAll<any[]>()
+    this._dataService
+            .getAll<"professeur/email/mdp/verif",any[]>()
             .subscribe((data: any[]) => this.values = data,
             error => () => {
                 console.log('error');
             },
             () => {
               console.log('success');
-              });*/
+              });
     this.iterator = 0;
   }
 
