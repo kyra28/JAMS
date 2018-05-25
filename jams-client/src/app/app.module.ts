@@ -18,6 +18,7 @@ import {DataService} from "./services/app-data-service";
 import {Configuration} from "./app.constants";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {HttpModule} from "@angular/http";
+import {EtudiantbilanComponent} from "./etudiant/etudiantbilan/etudiantbilan.component";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {HttpModule} from "@angular/http";
     EnseignantsessionComponent,
     EnseignantbilanComponent,
     MesClassesComponent,
-    PlayQcmProfessorViewComponent
+    PlayQcmProfessorViewComponent,
+    EtudiantbilanComponent
   ],
   imports: [
     BrowserModule,
