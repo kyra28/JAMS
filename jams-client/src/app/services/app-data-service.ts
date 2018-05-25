@@ -17,53 +17,19 @@ export class DataService {
             this.actionUrl = _configuration.server;
         }
 
-    public getAll<T>(): Observable<T> {
-        return this.http.get<T>(this.actionUrl);
+    public getAll<T>(path: string): Observable<T> {
+        return this.http.get<T>(this.actionUrl+path);
     }
 
-    public getSingle<T>(id: number): Observable<T> {
-        return this.http.get<T>(this.actionUrl + '/' + id);
+    public getSingle<T>(path: string): Observable<T> {
+        return this.http.get<T>(this.actionUrl + path);
     }
 
-    public add<T>(itemName: any): Observable<T> {
+    public add<T>(path: string, itemName: any): Observable<T> {
         // const toAdd = JSON.stringify({ ItemName: itemName });
-        return this.http.post<T>(this.actionUrl, itemName);
+        return this.http.post<T>(this.actionUrl+path, itemName);
     }
 
-    public update<T>(id: number, itemToUpdate: any): Observable<T> {
-        return this.http
-            .put<T>(this.actionUrl + id, JSON.stringify(itemToUpdate));
-    }
-
-    public delete<T>(id: number): Observable<T> {
-        return this.http.delete<T>(this.actionUrl + id);
-    }
-
-    public serviceQuestion () {
-        this.actionUrl += 'question/';
-    }
-
-    public serviceAnswer () {
-        this.actionUrl += 'answer/';
-    }
-
-    public serviceUser () {
-        this.actionUrl += 'user/';
-    }
-
-    public serviceQCM () {
-        this.actionUrl += 'qcm/';
-    }
-
-  public serviceSession () {
-    this.actionUrl += 'session/';
-  }
-  public serviceEtudiant () {
-    this.actionUrl = 'http://localhost:5353/etudiant/all';
-  }
-  public serviceNew () {
-    this.actionUrl = 'http://localhost:5353/etudiant/create';
-  }
 }
 
 

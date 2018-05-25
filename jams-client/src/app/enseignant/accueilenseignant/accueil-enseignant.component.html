@@ -14,6 +14,11 @@
         </select>
       </div>
 
+      <div *ngFor="let qcm of qcmlist">
+        {{qcm.nom}}
+
+      </div>
+
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <label class="input-group-text" for="inputGroupSelect01">Sélectionner une classe</label>
