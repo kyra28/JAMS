@@ -9,8 +9,7 @@ import { CreationqcmComponent } from './enseignant/creationqcm/creationqcm.compo
 import { NavbarComponent } from './enseignant/navbar/navbar.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { MesQcmComponent } from './enseignant/mesqcm/mes-qcm.component';
-import { AcceuilEnseignantComponent } from './enseignant/acceuilenseignant/acceuil-enseignant.component';
-import { MesclassesComponent } from './enseignant/mesclasses/mesclasses.component';
+import { AccueilEnseignantComponent } from './enseignant/accueilenseignant/accueil-enseignant.component';
 
 @NgModule({
   declarations: [
@@ -21,17 +20,17 @@ import { MesclassesComponent } from './enseignant/mesclasses/mesclasses.componen
     NavbarComponent,
     EtudiantComponent,
     MesQcmComponent,
-    AcceuilEnseignantComponent,
-    MesclassesComponent,
+    AccueilEnseignantComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: '', redirectTo: '/acceuil', pathMatch: 'full' },
-      {path: 'acceuil', component : AcceuilEnseignantComponent},
+      {path: '', redirectTo: '/connexion', pathMatch: 'full' },
+      {path: 'accueil', component : EnseignantComponent},
       {path: 'mesqcm', component : MesQcmComponent},
-      {path: 'mesclasses', component : MesclassesComponent},
-      {path: 'messqcm', component : MesclassesComponent}
+      {path: 'creationqcm', component : CreationqcmComponent},
+      {path: 'connexion', component : ConnexionComponent},
+      {path: 'etudiant', component : EtudiantComponent}
     ])
   ],
   providers: [],
