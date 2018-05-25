@@ -7,6 +7,8 @@ import {CreationqcmComponent} from "./enseignant/creationqcm/creationqcm.compone
 import {MesQcmComponent} from "./enseignant/mesqcm/mes-qcm.component";
 import {EnseignantsessionComponent} from "./enseignant/enseignantsession/enseignantsession.component";
 import {MesClassesComponent} from "./enseignant/mesclasses/mes-classes.component";
+import {EnseignantbilanComponent} from "./enseignant/enseignantbilan/enseignantbilan.component";
+import {PlayQcmProfessorViewComponent} from "./play-qcm-professor-view/play-qcm-professor-view.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/connexion', pathMatch: 'full' },
@@ -17,7 +19,8 @@ const appRoutes: Routes = [
   {path: 'connexion', component : ConnexionComponent},
   {path: 'etudiant', component : EtudiantComponent},
   {path: 'session', component : EnseignantsessionComponent},
-  {path: 'enseignantbilan', component : EnseignantbilanComponent}
+  {path: 'enseignantbilan', component : EnseignantbilanComponent},
+  {path: 'testrest', component : PlayQcmProfessorViewComponent}
 
 ];
 

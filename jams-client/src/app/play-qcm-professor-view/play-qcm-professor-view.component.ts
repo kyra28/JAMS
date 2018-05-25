@@ -10,7 +10,6 @@ import { DataService } from '../services/app-data-service';
 })
 export class PlayQcmProfessorViewComponent implements OnInit {
 
-  public message: string;
   public values: any[];
   public iterator: number;
 
@@ -19,9 +18,8 @@ export class PlayQcmProfessorViewComponent implements OnInit {
    }
 
   ngOnInit() {
-    this._dataService.serviceProfessor();
+    this._dataService.serviceEtudiant();
     this._dataService
-      /*
             .getAll<any[]>()
             .subscribe((data: any[]) => this.values = data,
             error => () => {
@@ -29,7 +27,7 @@ export class PlayQcmProfessorViewComponent implements OnInit {
             },
             () => {
               console.log('success');
-              })*/;
+              });
     this.iterator = 0;
   }
 

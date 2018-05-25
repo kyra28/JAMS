@@ -1,5 +1,5 @@
-<h2>Question numéros {{values[iterator].question_id}}</h2>
-<p>{{values[iterator].question}}</p>
+<!--<h2>Question numéros {{values[iterator].question_id}}</h2>
+<p>{{values[iterator].question}}</p>-->
 <div class="row">
     <div class="col-lg-4">
       <div class ="Colonne">
@@ -16,9 +16,11 @@
           Premier à répondre
       </div>
     </div>
+  {{values}}
+  {{values[0].adresse}}
 </div>
-<div *ngFor="let answer of values[iterator].answers">
-  <app-play-qcm-professor-reponse [reponse]="answer.answer"></app-play-qcm-professor-reponse>
+<div *ngFor="let etudiant of values">
+ {{etudiant.adresse}}
 
 </div>
 <div class="btn-group" role="group" aria-label="...">

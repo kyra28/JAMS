@@ -58,8 +58,8 @@ export class DataService {
   public serviceSession () {
     this.actionUrl += 'session/';
   }
-  public serviceProfessor () {
-    this.actionUrl += 'professor/';
+  public serviceEtudiant () {
+    this.actionUrl = 'http://localhost:5353/etudiant/all';
   }
 }
 

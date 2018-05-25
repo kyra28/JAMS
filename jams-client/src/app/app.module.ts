@@ -12,6 +12,12 @@ import { AccueilEnseignantComponent } from './enseignant/accueilenseignant/accue
 import { EnseignantsessionComponent } from './enseignant/enseignantsession/enseignantsession.component';
 import {EnseignantbilanComponent} from "./enseignant/enseignantbilan/enseignantbilan.component";
 import {routing} from "./app-routing.module";
+import {MesClassesComponent} from "./enseignant/mesclasses/mes-classes.component";
+import {PlayQcmProfessorViewComponent} from "./play-qcm-professor-view/play-qcm-professor-view.component";
+import {DataService} from "./services/app-data-service";
+import {Configuration} from "./app.constants";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -25,12 +31,15 @@ import {routing} from "./app-routing.module";
     AccueilEnseignantComponent,
     EnseignantsessionComponent,
     EnseignantbilanComponent,
+    MesClassesComponent,
+    PlayQcmProfessorViewComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService,Configuration],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

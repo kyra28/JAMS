@@ -3,7 +3,7 @@ var express = require('express');
 var router  = express.Router();
 
 //Tests avec get
-/*router.get('/:adresse/:mdp/create', function(req, res) {
+router.get('/:adresse/:mdp/create', function(req, res) {
     models.professeur.create({
         adresse: req.params.adresse,
         mdp: req.params.mdp
@@ -31,7 +31,7 @@ router.get('/:adresse/:mdp/verif', function(req, res) {
     });
 });
 
-*/
+
 router.post('/create', function(req, res) {
     models.professeur.create({
         adresse: req.body.adresse,
